@@ -1,12 +1,10 @@
 client/styles/sass
 client/js/application
+client/js/vendor
 
 config.rb
 Makefile
-bower.json
 README.md
-layout.ai
 .sass-cache
 .jshintrc
 .gitignore
-.bowerrc
