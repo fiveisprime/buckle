@@ -40,8 +40,9 @@ app.configure('development', function() {
 hbs.registerPartials(process.cwd() + '/views/partials');
 
 //
-// Bootstrap routes.
+// Bootstrap modules.
 //
 require('./routes')(app);
+require('./controllers')();
 
 app.listen(process.env.PORT || 3000);

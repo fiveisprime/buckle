@@ -1,4 +1,4 @@
-SRC = server/index.js server/controllers/*.js server/routes/index.js \
+SRC = server/index.js server/controllers/*.js server/routes/*.js \
 	client/js/application/application.js
 
 CLIENT = client/js/vendor/angular.js client/js/vendor/zepto.js \
