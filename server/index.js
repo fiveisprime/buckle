@@ -22,22 +22,22 @@ app.use(app.router);
 app.use(express.static(process.cwd() + '/client'));
 app.use(express.favicon(process.cwd() + '/client/img/favicon.ico'));
 
-if (process.env.NODE_ENV === 'production') {
+app.configure('production', function() {
+  app.set('script', '/js/app.min.js');
   app.use(express.session({
     store: new MongoStore({
       url: process.env.MONGO_URL
     }),
     secret: process.env.SESSION_SECRET
   }));
-} else {
+});
+
+app.configure('development', function() {
+  app.set('script', '/js/app.js');
   app.use(express.session({ secret: '26FED8272B2849EF9275CB9BD284D36F' }));
-}
+});
 
 hbs.registerPartials(process.cwd() + '/views/partials');
-
-hbs.registerHelper('script', function() {
-  return process.env.NODE_ENV === 'production' ? '/js/app.min.js': '/js/app.js';
-});
 
 //
 // Bootstrap routes.
