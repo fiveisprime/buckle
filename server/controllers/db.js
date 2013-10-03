@@ -24,7 +24,7 @@ db.once('open', function initializeMongoose() {
   if (!userSchema.options.toObject) userSchema.options.toObject = {};
   userSchema.options.toObject.transform = transform;
 
-  User = mongoose.model('User', User, 'User');
+  User = mongoose.model('User', userSchema, 'User');
 });
 
 exports.createUser = function(data, fn) {
