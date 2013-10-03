@@ -1,9 +1,10 @@
-// TODO: remove once the controllers are implemented.
-/* jshint unused: false */
+//
+// Initialize each of the controllers.
+//
+var Controller = function(db) {
+  this.user = require('./user')(db);
+};
 
-//
-// Initialize the controllers.
-//
 module.exports = function() {
-  var dbController = require('./db');
+  return new Controller(require('./db'));
 };

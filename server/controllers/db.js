@@ -19,7 +19,11 @@ db = mongoose.connection;
 
 db.on('error', console.error);
 db.once('open', function initializeMongoose() {
-  userSchema = new Schema({});
+  userSchema = new Schema({
+    id: { type: String, required: true, index: true }
+  , email: { type: String, required: true, index: true }
+  , password: { type:String, required: true }
+  });
 
   if (!userSchema.options.toObject) userSchema.options.toObject = {};
   userSchema.options.toObject.transform = transform;
@@ -27,9 +31,18 @@ db.once('open', function initializeMongoose() {
   User = mongoose.model('User', userSchema, 'User');
 });
 
+//
+// User access.
+//
+
 exports.createUser = function(data, fn) {
   var user = new User(data);
   user.save(fn);
+};
+
+exports.getUser = function(id, fn) {
+  if (id.indexOf('@') > -1) return User.findOne({ email: id }, fn);
+  User.findOne({ id: id }, fn);
 };
 
 exports.getUsers = function(fn) {

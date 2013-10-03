@@ -1,7 +1,9 @@
+var controllers = require('../controllers')();
+
 module.exports = function(app) {
 
   //
-  // Configure the routes.
+  // Route configuration.
   //
 
   app.get('/', function(req, res) {
