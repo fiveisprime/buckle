@@ -1,0 +1,28 @@
+{
+  "name": "buckle",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "scripts": {
+    "test": "make test",
+    "start": "node server/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fiveisprime/buckle"
+  },
+  "author": "Matt Hernandez <matt@modulus.io>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~3.3.4",
+    "connect-mongo": "~0.3.3",
+    "hbs": "~2.4.0"
+  },
+  "devDependencies": {
+    "jshint": "~2.1.8",
+    "uglify-js": "~2.3.6"
+  }
+}

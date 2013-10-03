@@ -1,0 +1,762 @@
+/* normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+/* line 21, sass/partials/_reset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+/* line 31, sass/partials/_reset.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ * Remove excess height in iOS5 devices
+ */
+/* line 42, sass/partials/_reset.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+/* line 52, sass/partials/_reset.scss */
+[hidden] {
+  display: none;
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+/* line 68, sass/partials/_reset.scss */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+/* line 82, sass/partials/_reset.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/*
+ * Addresses margins handled incorrectly in IE6/7
+ */
+/* line 90, sass/partials/_reset.scss */
+body {
+  margin: 0;
+}
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+/* line 103, sass/partials/_reset.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+/* line 113, sass/partials/_reset.scss */
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE6/7
+ * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+ */
+/* line 127, sass/partials/_reset.scss */
+h1 {
+  margin: 1em 0;
+}
+
+/* line 131, sass/partials/_reset.scss */
+h2 {
+  margin: 0;
+}
+
+/* line 135, sass/partials/_reset.scss */
+h3 {
+  margin: 1em 0 0 0;
+}
+
+/* line 139, sass/partials/_reset.scss */
+h4 {
+  margin: 1.33em 0;
+}
+
+/* line 143, sass/partials/_reset.scss */
+h5 {
+  margin: 1.67em 0;
+}
+
+/* line 147, sass/partials/_reset.scss */
+h6 {
+  margin: 2.33em 0;
+}
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+/* line 155, sass/partials/_reset.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+*/
+/* line 164, sass/partials/_reset.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 168, sass/partials/_reset.scss */
+blockquote {
+  margin: 1em 40px;
+}
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+/* line 176, sass/partials/_reset.scss */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+/* line 184, sass/partials/_reset.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/*
+ * Addresses margins set differently in IE6/7
+ */
+/* line 194, sass/partials/_reset.scss */
+p,
+pre {
+  margin: 1em 0;
+}
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+/* line 206, sass/partials/_reset.scss */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: "courier new", monospace;
+  font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+/* line 216, sass/partials/_reset.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+/* 1 */
+/* line 229, sass/partials/_reset.scss */
+q {
+  quotes: none;
+}
+
+/* 2 */
+/* line 236, sass/partials/_reset.scss */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* line 241, sass/partials/_reset.scss */
+small {
+  font-size: 75%;
+}
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+/* line 251, sass/partials/_reset.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 258, sass/partials/_reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 262, sass/partials/_reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7
+ */
+/* line 278, sass/partials/_reset.scss */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+/* line 282, sass/partials/_reset.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/*
+ * Addresses paddings set differently in IE6/7
+ */
+/* line 292, sass/partials/_reset.scss */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/*
+ * Corrects list images handled incorrectly in IE7
+ */
+/* line 301, sass/partials/_reset.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+/* line 317, sass/partials/_reset.scss */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/*
+ * Corrects overflow displayed oddly in IE9
+ */
+/* line 326, sass/partials/_reset.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11
+ */
+/* line 339, sass/partials/_reset.scss */
+figure {
+  margin: 0;
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+/* line 352, sass/partials/_reset.scss */
+form {
+  margin: 0;
+}
+
+/*
+ * Define consistent border, margin, and padding
+ */
+/* line 360, sass/partials/_reset.scss */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects text not wrapping in FF3
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+/* line 372, sass/partials/_reset.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+/* line 388, sass/partials/_reset.scss */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+/* line 400, sass/partials/_reset.scss */
+button,
+input {
+  line-height: normal;
+  /* 1 */
+}
+
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+/* line 414, sass/partials/_reset.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  /* 1 */
+  -webkit-appearance: button;
+  /* 2 */
+  *overflow: visible;
+  /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+/* line 425, sass/partials/_reset.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9
+ * 2. Removes excess padding in IE8/9
+ * 3. Removes excess padding in IE7
+      Known issue: excess padding remains in IE6
+ */
+/* line 437, sass/partials/_reset.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+/* line 449, sass/partials/_reset.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X
+ */
+/* line 461, sass/partials/_reset.scss */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+/* line 471, sass/partials/_reset.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+/* line 481, sass/partials/_reset.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells
+ */
+/* line 495, sass/partials/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Full width */
+/* line 3, sass/partials/_grid.scss */
+.grid_1 {
+  width: 6.5%;
+}
+
+/* line 4, sass/partials/_grid.scss */
+.grid_2 {
+  width: 15%;
+}
+
+/* line 5, sass/partials/_grid.scss */
+.grid_3 {
+  width: 23.5%;
+}
+
+/* line 6, sass/partials/_grid.scss */
+.grid_4 {
+  width: 32%;
+}
+
+/* line 7, sass/partials/_grid.scss */
+.grid_5 {
+  width: 40.5%;
+}
+
+/* line 8, sass/partials/_grid.scss */
+.grid_6 {
+  width: 49%;
+}
+
+/* line 9, sass/partials/_grid.scss */
+.grid_7 {
+  width: 57.5%;
+}
+
+/* line 10, sass/partials/_grid.scss */
+.grid_8 {
+  width: 66%;
+}
+
+/* line 11, sass/partials/_grid.scss */
+.grid_9 {
+  width: 74.5%;
+}
+
+/* line 12, sass/partials/_grid.scss */
+.grid_10 {
+  width: 83%;
+}
+
+/* line 13, sass/partials/_grid.scss */
+.grid_11 {
+  width: 91.5%;
+}
+
+/* line 14, sass/partials/_grid.scss */
+.grid_12 {
+  width: 100%;
+}
+
+/* line 27, sass/partials/_grid.scss */
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+  margin: 0 2% 1% 0;
+  float: left;
+  display: block;
+}
+
+/* line 33, sass/partials/_grid.scss */
+.alpha {
+  margin-left: 0;
+}
+
+/* line 36, sass/partials/_grid.scss */
+.omega {
+  margin-right: 0;
+}
+
+/* line 40, sass/partials/_grid.scss */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* line 46, sass/partials/_grid.scss */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* line 54, sass/partials/_grid.scss */
+.clearfix:after {
+  clear: both;
+  content: '\0000a0';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* line 65, sass/partials/_grid.scss */
+* html .clearfix,
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  /* line 83, sass/partials/_grid.scss */
+  .grid_1,
+  .grid_2,
+  .grid_3,
+  .grid_4,
+  .grid_5,
+  .grid_6,
+  .grid_7,
+  .grid_8,
+  .grid_9,
+  .grid_10,
+  .grid_11,
+  .grid_12 {
+    width: 100%;
+  }
+}
+/* line 1, sass/partials/_layout.scss */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #504D4C;
+  background-color: #ffffff;
+}
+
+/* line 9, sass/partials/_layout.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 13, sass/partials/_layout.scss */
+h1 {
+  font-size: 3.8em;
+}
+
+/* line 17, sass/partials/_layout.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 1, sass/partials/_menu.scss */
+.menu {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  background-color: #141414;
+  color: #E3E3E3;
+  z-index: 100;
+}
+
+/* line 11, sass/partials/_menu.scss */
+nav[role=navigation] {
+  float: right;
+  list-style: none;
+  margin: 0 50px 0 0;
+}
+/* line 15, sass/partials/_menu.scss */
+nav[role=navigation] li {
+  float: left;
+  color: #E3E3E3;
+}
+/* line 18, sass/partials/_menu.scss */
+nav[role=navigation] li a {
+  color: #E3E3E3;
+  text-decoration: none;
+}
+/* line 21, sass/partials/_menu.scss */
+nav[role=navigation] li a:hover {
+  color: #E3E3E3;
+}
+/* line 24, sass/partials/_menu.scss */
+nav[role=navigation] li a:active {
+  color: #E3E3E3;
+}
+/* line 27, sass/partials/_menu.scss */
+nav[role=navigation] li a:visited {
+  color: #E3E3E3;
+}
+
+/* line 34, sass/partials/_menu.scss */
+#logo {
+  font-size: 1.8em;
+  text-align: center;
+  margin: 10px 0;
+  color: #E3E3E3;
+}
+
+/* line 1, sass/partials/_footer.scss */
+footer[role=contentinfo] {
+  width: 100%;
+  margin: 20px auto 40px;
+  text-align: center;
+}
+
+/* line 1, sass/partials/_index.scss */
+.slide {
+  background-attachment: fixed;
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 140px 0;
+}
+
+/* line 9, sass/partials/_index.scss */
+#jumbotron {
+  margin-top: 50px;
+  color: #E5E6D6;
+  background-image: url('/img/light.jpg?1377786319');
+}
+
+/* line 15, sass/partials/_index.scss */
+#venues {
+  color: #E5E6D6;
+  background-image: url('/img/king.jpg?1377786344');
+}
+
+/* line 13, sass/style.scss */
+.spacer {
+  width: 100%;
+  height: 20px;
+}

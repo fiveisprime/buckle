@@ -1,0 +1,12 @@
+client/styles/sass
+client/js/application
+
+config.rb
+Makefile
+bower.json
+README.md
+layout.ai
+.sass-cache
+.jshintrc
+.gitignore
+.bowerrc
