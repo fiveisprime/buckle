@@ -661,21 +661,29 @@ body {
   font-size: 1em;
   color: #504D4C;
   background-color: #ffffff;
+  height: 100%;
 }
 
-/* line 9, sass/partials/_layout.scss */
+/* line 10, sass/partials/_layout.scss */
 img {
   max-width: 100%;
 }
 
-/* line 13, sass/partials/_layout.scss */
+/* line 14, sass/partials/_layout.scss */
 h1 {
   font-size: 3.8em;
 }
 
-/* line 17, sass/partials/_layout.scss */
+/* line 18, sass/partials/_layout.scss */
 h2 {
   font-size: 2em;
+}
+
+/* line 22, sass/partials/_layout.scss */
+section.error {
+  height: 300px;
+  margin-top: 100px;
+  text-align: center;
 }
 
 /* line 1, sass/partials/_menu.scss */
@@ -699,26 +707,44 @@ nav[role=navigation] {
 nav[role=navigation] li {
   float: left;
   color: #E3E3E3;
+  margin: 0 10px 0 0;
 }
-/* line 18, sass/partials/_menu.scss */
+/* line 19, sass/partials/_menu.scss */
 nav[role=navigation] li a {
   color: #E3E3E3;
   text-decoration: none;
 }
-/* line 21, sass/partials/_menu.scss */
+/* line 22, sass/partials/_menu.scss */
 nav[role=navigation] li a:hover {
   color: #E3E3E3;
 }
-/* line 24, sass/partials/_menu.scss */
+/* line 25, sass/partials/_menu.scss */
 nav[role=navigation] li a:active {
   color: #E3E3E3;
 }
-/* line 27, sass/partials/_menu.scss */
+/* line 28, sass/partials/_menu.scss */
 nav[role=navigation] li a:visited {
   color: #E3E3E3;
 }
 
-/* line 34, sass/partials/_menu.scss */
+@media screen and (max-width: 480px) {
+  /* line 36, sass/partials/_menu.scss */
+  nav[role=navigation] {
+    float: none;
+    width: 100%;
+    margin: 0 auto 10px;
+  }
+  /* line 40, sass/partials/_menu.scss */
+  nav[role=navigation] ul {
+    margin: 0;
+  }
+  /* line 43, sass/partials/_menu.scss */
+  nav[role=navigation] li {
+    float: none;
+    text-align: center;
+  }
+}
+/* line 50, sass/partials/_menu.scss */
 #logo {
   font-size: 1.8em;
   text-align: center;
@@ -728,8 +754,10 @@ nav[role=navigation] li a:visited {
 
 /* line 1, sass/partials/_footer.scss */
 footer[role=contentinfo] {
+  position: absolute;
   width: 100%;
   margin: 20px auto 40px;
+  bottom: 0;
   text-align: center;
 }
 
@@ -755,7 +783,27 @@ footer[role=contentinfo] {
   background-image: url('/img/king.jpg?1377786344');
 }
 
-/* line 13, sass/style.scss */
+/* line 1, sass/partials/_register.scss */
+.register-form {
+  margin-top: 100px;
+}
+/* line 3, sass/partials/_register.scss */
+.register-form .inner {
+  padding-top: 20px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #F8F8F8;
+}
+/* line 8, sass/partials/_register.scss */
+.register-form .inner input {
+  width: 85%;
+  height: 25px;
+  margin: 5px 0;
+  text-align: center;
+  border: 1px solid #b0b0b0;
+}
+
+/* line 14, sass/style.scss */
 .spacer {
   width: 100%;
   height: 20px;

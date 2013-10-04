@@ -18,9 +18,9 @@ app.disable('x-powered-by');
 app.use(express.compress());
 app.use(express.cookieParser());
 app.use(express.bodyParser());
-app.use(app.router);
 app.use(express.static(process.cwd() + '/client'));
 app.use(express.favicon(process.cwd() + '/client/img/favicon.ico'));
+app.use(app.router);
 
 app.configure('production', function() {
   app.set('script', '/js/app.min.js');
@@ -43,6 +43,10 @@ hbs.registerPartials(process.cwd() + '/views/partials');
 // Bootstrap modules.
 //
 require('./routes')(app);
+
+app.get('*', function(req, res) {
+  res.render('error', { error: 'Page not found.' });
+});
 
 require('express-trace')(app);
 app.listen(process.env.PORT || 3000);
