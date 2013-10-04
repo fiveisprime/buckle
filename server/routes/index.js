@@ -1,7 +1,8 @@
 // TODO: remove the override:
 /* jshint unused: false */
 
-var controllers = require('../controllers')();
+var controllers = require('../controllers')()
+  , users       = controllers.user;
 
 module.exports = function(app) {
 
@@ -19,5 +20,20 @@ module.exports = function(app) {
 
   app.post('/register', function(req, res) {
     res.render('error', { error: 'Not yet...' });
+  });
+
+  app.get('/login', function(req, res) {
+    res.render('user/login');
+  });
+
+  app.post('/login', function(req, res) {
+    users.authenticate(req.body.is, req.body.password, function(err, user) {
+      if (err) return res.render('error', { error: 'Unable to authenticate.' });
+
+      req.session.user = user;
+      res.render('index', {
+        user: req.session.user
+      });
+    });
   });
 };

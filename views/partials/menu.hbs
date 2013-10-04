@@ -1,11 +1,15 @@
 <div class="menu">
   <a href="/">
-    <h1 id="logo" class="grid_3">Live • Kinect</h1>
+    <h1 id="logo" class="grid_3">Live•Kinect</h1>
   </a>
   <nav role="navigation">
     <ul>
+    {{#if user}}
+      <li><a href="/dashboard">Dashboard</a></li>
+    {{else}}
       <li><a href="/register">Register</a></li>
       <li><a href="/login">Login</a></li>
+    {{/if}}
     </ul>
   </nav>
 </div>
