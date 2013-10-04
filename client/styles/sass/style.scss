@@ -4,12 +4,15 @@
 @import "partials/grid";
 @import "partials/layout";
 
+@import "partials/forms";
+
 @import "partials/menu";
 @import "partials/footer";
 
 // Pages
 @import "partials/index";
 @import "partials/register";
+@import "partials/login";
 
 .spacer {
   width: 100%;

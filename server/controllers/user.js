@@ -12,8 +12,9 @@ var User = function(db) {
 };
 
 User.prototype.authenticate = function(id, password, fn) {
-  this.get.db.getUser(id, function(err, user) {
+  this.db.getUser(id, function(err, user) {
     if (err) return fn(err, null);
+    if (!user) return fn(new Error('User account not found.'), null);
 
     bcrypt.compare(password, user.password, function(err, res) {
       if (err) return fn(err, null);

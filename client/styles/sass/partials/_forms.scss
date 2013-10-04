@@ -1,0 +1,37 @@
+.form {
+  padding-top: 100px;
+  height: 50%;
+  .inner {
+    padding-top: 20px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #F8F8F8;
+  }
+}
+
+input {
+  width: 85%;
+  height: 25px;
+  margin: 5px 0;
+  text-align: center;
+  border: 1px solid #B0B0B0;
+  color: #2E2C2C;
+}
+
+button {
+  width: 50%;
+  height: 30px;
+  background-color: #7281A5;
+  border: none;
+  color: #2E2C2C;
+  &:hover {
+    background-color: #314475;
+    color: #D3D3D3;
+    border: none;
+  }
+  &:active{
+    background-color: #314475;
+    color: #D3D3D3;
+    border: none;
+  }
+}

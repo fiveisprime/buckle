@@ -22,7 +22,9 @@ db.once('open', function initializeMongoose() {
   userSchema = new Schema({
     id: { type: String, required: true, index: true }
   , email: { type: String, required: true, index: true }
-  , password: { type:String, required: true }
+  , password: { type: String, required: true }
+  , first: String
+  , last: String
   });
 
   if (!userSchema.options.toObject) userSchema.options.toObject = {};

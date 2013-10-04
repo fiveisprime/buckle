@@ -27,7 +27,7 @@ module.exports = function(app) {
   });
 
   app.post('/login', function(req, res) {
-    users.authenticate(req.body.is, req.body.password, function(err, user) {
+    users.authenticate(req.body.id, req.body.password, function(err, user) {
       if (err) return res.render('error', { error: 'Unable to authenticate.' });
 
       req.session.user = user;
