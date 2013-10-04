@@ -1,5 +1,6 @@
 {
   "name": "buckle",
+  "mod-project-name": "buckle",
   "version": "0.0.0",
   "description": "",
   "main": "server/index.js",

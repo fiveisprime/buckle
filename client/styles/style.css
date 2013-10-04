@@ -746,14 +746,15 @@ nav[role=navigation] li a:visited {
   /* line 40, sass/partials/_menu.scss */
   nav[role=navigation] ul {
     margin: 0;
+    padding: 0;
   }
-  /* line 43, sass/partials/_menu.scss */
+  /* line 44, sass/partials/_menu.scss */
   nav[role=navigation] li {
     float: none;
     text-align: center;
   }
 }
-/* line 50, sass/partials/_menu.scss */
+/* line 51, sass/partials/_menu.scss */
 #logo {
   font-size: 1.8em;
   text-align: center;
