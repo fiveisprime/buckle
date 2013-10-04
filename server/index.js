@@ -44,4 +44,5 @@ hbs.registerPartials(process.cwd() + '/views/partials');
 //
 require('./routes')(app);
 
+require('express-trace')(app);
 app.listen(process.env.PORT || 3000);
