@@ -5,21 +5,22 @@
 //
 
 var express    = require('express')
+  , path       = require('path')
   , hbs        = require('hbs')
   , MongoStore = require('connect-mongo')(express);
 
 var app = express();
 
 app.set('view engine', 'hbs');
-app.set('views', process.cwd() + '/views');
+app.set('views', path.resolve(__dirname, '../views'));
 
 app.disable('x-powered-by');
 
 app.use(express.compress());
 app.use(express.cookieParser());
 app.use(express.bodyParser());
-app.use(express.static(process.cwd() + '/client'));
-app.use(express.favicon(process.cwd() + '/client/img/favicon.ico'));
+app.use(express.static(path.resolve(__dirname, '../client')));
+app.use(express.favicon(path.resolve(__dirname, '../client/img/favicon.ico')));
 app.use(app.router);
 
 app.configure('production', function() {
@@ -37,7 +38,7 @@ app.configure('development', function() {
   app.use(express.session({ secret: '26FED8272B2849EF9275CB9BD284D36F' }));
 });
 
-hbs.registerPartials(process.cwd() + '/views/partials');
+hbs.registerPartials(path.resolve(__dirname, '../views/partials'));
 
 //
 // Bootstrap modules.

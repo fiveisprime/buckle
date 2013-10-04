@@ -7,8 +7,8 @@ var User = function(db) {
   // Fall back to default rounds/length for local development.
   //
   this.salt = bcrypt.genSaltSync(
-    process.env.SALT_ROUNDS || 10
-  , process.env.SEED_LENGTH || 20);
+    +process.env.SALT_ROUNDS || 10
+  , +process.env.SEED_LENGTH || 20);
 };
 
 User.prototype.authenticate = function(id, password, fn) {
