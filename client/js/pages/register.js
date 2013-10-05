@@ -1,5 +1,11 @@
 /* jshint undef: false, unused: false */
 
-angular.module('app', []);
+function registerController($scope) {
 
-function registerController($scope) { }
+  $scope.id = '';
+  $scope.first = '';
+  $scope.last = '';
+  $scope.email = '';
+  $scope.password = '';
+
+}

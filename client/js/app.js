@@ -16722,8 +16722,23 @@ window.Zepto = Zepto
 })(Zepto)
 /* jshint undef: false, unused: false */
 
-angular.module('app', []);
+function loginController($scope) {
 
-function registerController($scope) { }
+  $scope.id = '';
+  $scope.password = '';
+
+}
 /* jshint undef: false, unused: false */
 
+function registerController($scope) {
+
+  $scope.id = '';
+  $scope.first = '';
+  $scope.last = '';
+  $scope.email = '';
+  $scope.password = '';
+
+}
+/* jshint undef: false, unused: false */
+
+angular.module('app', []);

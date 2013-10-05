@@ -8,6 +8,9 @@
     background-color: #F8F8F8;
   }
 }
+.form-wrap {
+  height: 90%;
+}
 
 input {
   width: 85%;
@@ -35,3 +38,12 @@ button {
     border: none;
   }
 }
+
+button[disabled] {
+  background-color: #A3A3A3;
+  color: #D3D3D3;
+  @include box-shadow(inset 1px 1px 3px #696969, inset -1px -1px 3px #696969);
+}
+
+:valid   { border: 1px solid #005700; }
+:invalid { border: 1px solid #AD0001; }

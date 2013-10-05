@@ -1,13 +1,19 @@
-<form action="/login" method="post" accept-charset="utf-8" class="login-form">
+<div ng-controller="loginController" class="form-wrap">
+  <form name="loginForm" novalidate action="/login" method="post" accept-charset="utf-8" class="login-form">
 
-  <div class="grid_4 alpha"></div>
+    <div class="grid_4 alpha"></div>
 
-  <div class="inner grid_4">
-    <input name="id" value="" placeholder="Username or Email Address">
-    <input type="password" name="password" value="" placeholder="Password">
-    <p><button type="submit">Login</button></p>
-  </div>
+    <div class="inner grid_4">
+      <input name="id" title="Email address or user name." value="" placeholder="Username or Email Address" required>
+      <input type="password" title="Password" name="password" value="" placeholder="Password" required>
+      <p>
+        <button type="submit" ng-disabled="loginForm.$invalid">Login</button>
+      </p>
+    </div>
 
-  <div class="grid_4 omega"></div>
+    <div class="grid_4 omega"></div>
 
-</form>
+  </form>
+</div>
+
+<script src="/js/pages/login.js"></script>

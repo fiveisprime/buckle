@@ -21,7 +21,6 @@ app.use(express.cookieParser());
 app.use(express.bodyParser());
 app.use(express.static(path.resolve(__dirname, '../client')));
 app.use(express.favicon(path.resolve(__dirname, '../client/img/favicon.ico')));
-app.use(app.router);
 
 app.configure('production', function() {
   app.set('script', '/js/app.min.js');
@@ -37,6 +36,9 @@ app.configure('development', function() {
   app.set('script', '/js/app.js');
   app.use(express.session({ secret: '26FED8272B2849EF9275CB9BD284D36F' }));
 });
+
+// Ensure that the router happens _after_ the session is configured.
+app.use(app.router);
 
 hbs.registerPartials(path.resolve(__dirname, '../views/partials'));
 

@@ -1,14 +1,14 @@
-<div ng-controller="registerController">
-  <form name="registerForm" novalidate ng-submit="submit();" action="/register" method="post" accept-charset="utf-8" class="register-form">
+<div ng-controller="registerController" class="form-wrap">
+  <form name="registerForm" novalidate action="/register" method="post" accept-charset="utf-8" class="register-form">
 
     <div class="grid_4 alpha"></div>
 
     <div class="inner grid_4">
-      <input name="username" value="" placeholder="Username" ng-model="username" required>
-      <input name="first" value="" placeholder="First Name" ng-model="first" required>
-      <input name="last" value="" placeholder="Last Name" ng-model="last" required>
-      <input name="email" value="" placeholder="Email Address" ng-model="email" required>
-      <input type="password" name="password" value="" placeholder="Password" ng-model="password" required>
+      <input type="text" title="User Name" name="id" value="" placeholder="Username" ng-model="username" required autofocus>
+      <input type="text" title="Last Name" name="first" value="" placeholder="First Name" ng-model="first" required>
+      <input type="text" title="Last Name" name="last" value="" placeholder="Last Name" ng-model="last" required>
+      <input type="email" title="Email Address" name="email" value="" placeholder="Email Address" ng-model="email" required>
+      <input type="password" title="Password" name="password" value="" placeholder="Password" ng-model="password" required>
       <p>
         <button type="submit" ng-disabled="registerForm.$invalid">Register</button>
       </p>

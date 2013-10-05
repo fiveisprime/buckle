@@ -19,7 +19,11 @@ module.exports = function(app) {
   });
 
   app.post('/register', function(req, res) {
-    res.render('error', { error: 'Not yet...' });
+    users.create(req.body, function(err, user) {
+      if (err) return res.render('error', { error: err.message });
+      req.session.user = user;
+      res.render('index', { user: user });
+    });
   });
 
   app.get('/login', function(req, res) {
