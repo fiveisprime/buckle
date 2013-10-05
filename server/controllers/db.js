@@ -60,7 +60,7 @@ exports.flatten = function(docs) {
   } else {
     return docs.toObject();
   }
-}
+};
 
 //
 // User access.
