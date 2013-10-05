@@ -65,6 +65,13 @@ User.prototype.create = function(data, fn) {
   });
 };
 
+//
+// Update a user object with the specified data.
+//
+User.prototype.update = function(data, fn) {
+  this.db.updateUser(data, fn);
+};
+
 module.exports = function(db) {
   return new User(db);
 };

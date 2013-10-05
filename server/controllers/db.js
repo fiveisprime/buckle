@@ -22,11 +22,12 @@ db = mongoose.connection;
 db.on('error', console.error);
 db.once('open', function initializeMongoose() {
   userSchema = new Schema({
-    id: { type: String, required: true, index: true }
+    username: { type: String, required: true, index: true }
   , email: { type: String, required: true, index: true }
   , password: { type: String, required: true }
   , first: String
   , last: String
+  , bio: String
   , links: [linksSchema]
   });
 
@@ -67,16 +68,41 @@ exports.flatten = function(docs) {
 // ============
 //
 
+//
+// Create a new user from the specified user data.
+//
 exports.createUser = function(data, fn) {
   var user = new User(data);
   user.save(fn);
 };
 
+//
+// Get a user by ID where ID is either the user's username or email address.
+//
 exports.getUser = function(id, fn) {
   if (id.indexOf('@') > -1) return User.findOne({ email: id }, fn);
-  User.findOne({ id: id }, fn);
+  User.findOne({ username: id }, fn);
 };
 
+//
+// Get all users.
+//
 exports.getUsers = function(fn) {
   User.find(fn);
+};
+
+//
+// Update the specified user object.
+//
+exports.updateUser = function(data, fn) {
+  User.findOne({ username: data.username }, function(err, user) {
+    if (err) return fn(err, null);
+    var keys = Object.keys(user), i = 0;
+
+    for (; i < keys.length; i++) {
+      user[keys[i]] = data[keys[i]] || user[keys[i]];
+    }
+
+    user.save(fn);
+  });
 };
