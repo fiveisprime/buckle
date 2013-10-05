@@ -5,6 +5,10 @@ var sanitize = function(user) {
   return user;
 };
 
+//
+// User constructor function for working with users. Handles validation and
+//    persistence of user information.
+//
 var User = function(db) {
   this.db = db;
 
@@ -16,6 +20,9 @@ var User = function(db) {
   , +process.env.SEED_LENGTH || 20);
 };
 
+//
+// Authenticate the user with the specified ID against the specified password.
+//
 User.prototype.authenticate = function(id, password, fn) {
   this.db.getUser(id, function(err, user) {
     if (err) return fn(err, null);
@@ -26,7 +33,7 @@ User.prototype.authenticate = function(id, password, fn) {
     bcrypt.compare(password, user.password, function(err, res) {
       if (err) return fn(err, null);
       if (res) {
-        fn(null, user);
+        fn(null, sanitize(user));
       } else {
         fn(new Error('Invalid user credentials.'), null);
       }
@@ -34,6 +41,9 @@ User.prototype.authenticate = function(id, password, fn) {
   });
 };
 
+//
+// Get the public profile for the use with the specified id.
+//
 User.prototype.getPublicProfile = function(id, fn) {
   this.db.getUser(id, function(err, user) {
     if (user) return fn(null, sanitize(user.toObject()));
@@ -41,6 +51,9 @@ User.prototype.getPublicProfile = function(id, fn) {
   });
 };
 
+//
+// Creates a new user from the data posted in from the registration form.
+//
 User.prototype.create = function(data, fn) {
   var _this = this;
 
