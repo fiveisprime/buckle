@@ -1,5 +1,10 @@
 var bcrypt = require('bcrypt');
 
+var sanitize = function(user) {
+  delete user.password;
+  return user;
+};
+
 var User = function(db) {
   this.db = db;
 
@@ -24,6 +29,13 @@ User.prototype.authenticate = function(id, password, fn) {
         fn(new Error('Invalid user credentials.'), null);
       }
     });
+  });
+};
+
+User.prototype.getPublicProfile = function(id, fn) {
+  this.db.getUser(id, function(err, user) {
+    if (user) return fn(null, sanitize(user));
+    fn(err, null);
   });
 };
 
