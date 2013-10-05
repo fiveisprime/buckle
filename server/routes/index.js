@@ -11,7 +11,9 @@ module.exports = function(app) {
   //
 
   app.get('/', function(req, res) {
-    res.render('index');
+    res.render('index', {
+      user: req.session.user
+    });
   });
 
   app.get('/register', function(req, res) {
@@ -35,9 +37,7 @@ module.exports = function(app) {
       if (err) return res.render('error', { error: 'Unable to authenticate.' });
 
       req.session.user = user;
-      res.render('index', {
-        user: req.session.user
-      });
+      res.redirect('/');
     });
   });
 };

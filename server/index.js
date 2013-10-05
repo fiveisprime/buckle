@@ -37,9 +37,6 @@ app.configure('development', function() {
   app.use(express.session({ secret: '26FED8272B2849EF9275CB9BD284D36F' }));
 });
 
-// Ensure that the router happens _after_ the session is configured.
-app.use(app.router);
-
 hbs.registerPartials(path.resolve(__dirname, '../views/partials'));
 
 //
@@ -48,7 +45,7 @@ hbs.registerPartials(path.resolve(__dirname, '../views/partials'));
 require('./routes')(app);
 
 app.get('*', function(req, res) {
-  res.render('error', { error: 'Page not found.' });
+  res.render('error', { error: 'Page not found.', user: req.session.user });
 });
 
 require('express-trace')(app);

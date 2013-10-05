@@ -32,7 +32,7 @@ db.once('open', function initializeMongoose() {
 
   linksSchema = new Schema({
     name: String
-  , icon_url: String
+  , icon: String
   , url: String
   });
 
