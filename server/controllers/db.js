@@ -4,6 +4,8 @@ var mongoose = require('mongoose')
 
 var userSchema, User;
 
+var linksSchema;
+
 //
 // Removes Object ID and Version objects from a model.
 //
@@ -25,10 +27,20 @@ db.once('open', function initializeMongoose() {
   , password: { type: String, required: true }
   , first: String
   , last: String
+  , links: [linksSchema]
+  });
+
+  linksSchema = new Schema({
+    name: String
+  , icon_url: String
+  , url: String
   });
 
   if (!userSchema.options.toObject) userSchema.options.toObject = {};
+  if (!linksSchema.options.toObject) linksSchema.options.toObject = {};
+
   userSchema.options.toObject.transform = transform;
+  linksSchema.options.toObject.transform = transform;
 
   User = mongoose.model('User', userSchema, 'User');
 });

@@ -28,8 +28,8 @@ app.configure('production', function() {
   app.use(express.session({
     store: new MongoStore({
       url: process.env.MONGO_URL
-    }),
-    secret: process.env.SESSION_SECRET
+    })
+  , secret: process.env.SESSION_SECRET
   }));
 });
 

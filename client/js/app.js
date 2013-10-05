@@ -16722,3 +16722,8 @@ window.Zepto = Zepto
 })(Zepto)
 /* jshint undef: false, unused: false */
 
+angular.module('app', []);
+
+function registerController($scope) { }
+/* jshint undef: false, unused: false */
+
