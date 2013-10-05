@@ -46,7 +46,25 @@ db.once('open', function initializeMongoose() {
 });
 
 //
+// Utilities.
+// ==========
+//
+
+exports.flatten = function(docs) {
+  if (!docs) return null;
+
+  if (docs instanceof Array) {
+    return docs.map(function(doc) {
+      return doc.toObject();
+    });
+  } else {
+    return docs.toObject();
+  }
+}
+
+//
 // User access.
+// ============
 //
 
 exports.createUser = function(data, fn) {

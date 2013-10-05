@@ -21,6 +21,8 @@ User.prototype.authenticate = function(id, password, fn) {
     if (err) return fn(err, null);
     if (!user) return fn(new Error('User account not found.'), null);
 
+    user = user.toObject();
+
     bcrypt.compare(password, user.password, function(err, res) {
       if (err) return fn(err, null);
       if (res) {
@@ -34,14 +36,20 @@ User.prototype.authenticate = function(id, password, fn) {
 
 User.prototype.getPublicProfile = function(id, fn) {
   this.db.getUser(id, function(err, user) {
-    if (user) return fn(null, sanitize(user));
+    if (user) return fn(null, sanitize(user.toObject()));
     fn(err, null);
   });
 };
 
 User.prototype.create = function(data, fn) {
+  var _this = this;
+
   data.password = bcrypt.hashSync(data.password, this.salt);
-  this.db.createUser(data, fn);
+  this.db.createUser(data, function(err, docs) {
+    if (err) return fn(err, null);
+
+    fn(null, _this.db.flatten(docs));
+  });
 };
 
 module.exports = function(db) {
