@@ -1,5 +1,9 @@
 var bcrypt = require('bcrypt');
 
+//
+// Remove any fields that should not be visible outside of the user controller
+//    including the user's password.
+//
 var sanitize = function(user) {
   delete user.password;
   return user;

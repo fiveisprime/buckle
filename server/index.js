@@ -1,9 +1,3 @@
-//
-//     Live Kinect
-//     Copyright(c) 2013 Matt Hernandez <matt@modulus.io>
-//     MIT Licensed
-//
-
 var express    = require('express')
   , path       = require('path')
   , hbs        = require('hbs')
