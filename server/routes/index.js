@@ -46,7 +46,7 @@ module.exports = function(app) {
       }
 
       req.session.user = user;
-      res.render('index', { user: req.session.user });
+      res.redirect('/');
     });
   });
 
@@ -64,5 +64,10 @@ module.exports = function(app) {
       req.session.user = user;
       res.redirect('/dashboard');
     });
+  });
+
+  app.get('/logout', function(req, res) {
+    req.session.user = null;
+    res.redirect('/');
   });
 };

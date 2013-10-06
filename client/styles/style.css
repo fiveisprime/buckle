@@ -862,7 +862,7 @@ footer[role=contentinfo] {
 /* line 1, sass/partials/_dashboard.scss */
 .dashboard {
   min-height: 80%;
-  margin-top: 85px;
+  margin-top: 100px;
 }
 /* line 4, sass/partials/_dashboard.scss */
 .dashboard h2 {
@@ -872,7 +872,7 @@ footer[role=contentinfo] {
 /* line 1, sass/partials/_profile.scss */
 .profile {
   min-height: 80%;
-  margin-top: 85px;
+  margin-top: 100px;
 }
 /* line 4, sass/partials/_profile.scss */
 .profile h2 {

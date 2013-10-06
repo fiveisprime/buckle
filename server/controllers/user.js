@@ -1,4 +1,5 @@
-var bcrypt = require('bcrypt');
+var bcrypt   = require('bcrypt')
+  , gravatar = require('gravatar');
 
 //
 // Remove any fields that should not be visible outside of the user controller
@@ -62,6 +63,7 @@ User.prototype.create = function(data, fn) {
   var _this = this;
 
   data.password = bcrypt.hashSync(data.password, this.salt);
+  data.image = gravatar.url(data.email, { s: 200 });
   this.db.createUser(data, function(err, docs) {
     if (err) return fn(err, null);
 

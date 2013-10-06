@@ -28,6 +28,7 @@ db.once('open', function initializeMongoose() {
   , first: String
   , last: String
   , bio: String
+  , image: String
   , links: [linksSchema]
   });
 
