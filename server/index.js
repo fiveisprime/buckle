@@ -1,6 +1,7 @@
 var express    = require('express')
   , path       = require('path')
   , hbs        = require('hbs')
+  , phalanx    = require('phalanx')
   , MongoStore = require('connect-mongo')(express);
 
 var app = express();
@@ -39,7 +40,7 @@ hbs.registerPartials(path.resolve(__dirname, '../views/partials'));
 require('./routes')(app);
 
 app.get('*', function(req, res) {
-  res.render('error', { error: 'Page not found.', user: req.session.user });
+  phalanx.notFound('Page not found.').render(res, 'error');
 });
 
 require('express-trace')(app);
