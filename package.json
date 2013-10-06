@@ -2,7 +2,7 @@
   "name": "buckle",
   "mod-project-name": "buckle",
   "version": "0.0.0",
-  "description": "",
+  "description": "Buckle site.",
   "main": "server/index.js",
   "engines": {
     "node": "0.10.x"
