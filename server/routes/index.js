@@ -19,7 +19,10 @@ module.exports = function(app) {
 
   app.get('/users/:id', function(req, res) {
     users.getPublicProfile(req.params.id, function(err, user) {
-      if (err) return res.render('error', { error: err.message });
+      if (err) {
+        console.error(err);
+        return res.render('error', { error: err.message });
+      }
       if (!user) return res.render('error', { error: 'User not found.' });
 
       res.render('user/profile', { user: user });
@@ -37,7 +40,11 @@ module.exports = function(app) {
 
   app.post('/register', function(req, res) {
     users.create(req.body, function(err, user) {
-      if (err) return res.render('error', { error: err.message });
+      if (err) {
+        console.error(err);
+        return res.render('error', { error: err.message });
+      }
+
       req.session.user = user;
       res.render('index', { user: req.session.user });
     });
@@ -49,8 +56,10 @@ module.exports = function(app) {
 
   app.post('/login', function(req, res) {
     users.authenticate(req.body.id, req.body.password, function(err, user) {
-      console.error(err);
-      if (err) return res.render('error', { error: 'Unable to authenticate.' });
+      if (err) {
+        console.error(err);
+        return res.render('error', { error: 'Unable to authenticate.' });
+      }
 
       req.session.user = user;
       res.redirect('/dashboard');
