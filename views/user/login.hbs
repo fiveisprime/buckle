@@ -1,19 +1,22 @@
-<div ng-controller="loginController" class="form-wrap">
-  <form name="loginForm" novalidate action="/login" method="post" accept-charset="utf-8" class="login-form">
-
-    <div class="grid_4 alpha"></div>
-
-    <div class="inner grid_4">
-      <input name="id" title="Email address or user name." value="" placeholder="Username or Email Address" required autofocus>
-      <input type="password" title="Password" name="password" value="" placeholder="Password" required>
-      <p>
-        <button type="submit" ng-disabled="loginForm.$invalid">Login</button>
-      </p>
-    </div>
-
-    <div class="grid_4 omega"></div>
-
-  </form>
+<div ng-controller="loginController" class="form-wrap container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    
+    <form role="form" class="col-md-6" name="loginForm" novalidate action="/register" method="post" accept-charset="utf-8">
+      <div class="form-group">
+        <label for="id">Username or Email</label>
+        <input type="text" class="form-control" name="id" placeholder="Username or Email" ng-model="username" required autofocus>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" ng-model="password" placeholder="Password" required>
+      </div>
+    
+      <button type="submit" class="btn btn-primary" ng-disabled="loginForm.$invalid">Sign Up</button>
+    </form>
+    
+    <div class="col-md-3"></div>
+  </div>
 </div>
 
 <script src="/js/pages/login.js"></script>

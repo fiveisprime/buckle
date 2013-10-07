@@ -1,22 +1,34 @@
-<div ng-controller="registerController" class="form-wrap">
-  <form name="registerForm" novalidate action="/register" method="post" accept-charset="utf-8" class="register-form">
+<div ng-controller="registerController" class="form-wrap container">
+  <div class="row">
+    <div class="col-md-3"></div>
 
-    <div class="grid_4 alpha"></div>
+    <form role="form" class="col-md-6" name="registerForm" novalidate action="/register" method="post" accept-charset="utf-8">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" name="username" placeholder="Username" ng-model="username" required autofocus>
+      </div>
+      <div class="form-group">
+        <label for="first">First Name</label>
+        <input type="text" class="form-control" name="first" ng-model="first" placeholder="First Name" required>
+      </div>
+      <div class="form-group">
+        <label for="last">Last Name</label>
+        <input type="text" class="form-control" name="last" ng-model="last" placeholder="Last Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control" name="email" ng-model="email" placeholder="Email Address" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" ng-model="password" placeholder="Password" required>
+      </div>
 
-    <div class="inner grid_4">
-      <input type="text" title="User Name" name="username" value="" placeholder="Username" ng-model="username" required autofocus>
-      <input type="text" title="Last Name" name="first" value="" placeholder="First Name" ng-model="first" required>
-      <input type="text" title="Last Name" name="last" value="" placeholder="Last Name" ng-model="last" required>
-      <input type="email" title="Email Address" name="email" value="" placeholder="Email Address" ng-model="email" required>
-      <input type="password" title="Password" name="password" value="" placeholder="Password" ng-model="password" required>
-      <p>
-        <button type="submit" ng-disabled="registerForm.$invalid">Register</button>
-      </p>
-    </div>
+      <button type="submit" class="btn btn-primary" ng-disabled="registerForm.$invalid">Sign Up</button>
+    </form>
 
-    <div class="grid_4 omega"></div>
-
-  </form>
+    <div class="col-md-3"></div>
+  </div>
 </div>
 
 <script src="/js/pages/register.js"></script>

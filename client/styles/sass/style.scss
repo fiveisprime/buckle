@@ -1,24 +1,16 @@
 @import "compass";
 
-@import "partials/reset";
-@import "partials/variables";
-@import "partials/fonts";
-@import "partials/grid";
-@import "partials/layout";
+//@import "partials/variables";
+//@import "partials/fonts";
 
-@import "partials/forms";
+@import "partials/layout";
+@import "partials/bootstrap";
 
 @import "partials/menu";
 @import "partials/footer";
 
 // Pages
 @import "partials/index";
-@import "partials/register";
-@import "partials/login";
+@import "partials/forms";
 @import "partials/dashboard";
 @import "partials/profile";
-
-.spacer {
-  width: 100%;
-  height: 20px;
-}
