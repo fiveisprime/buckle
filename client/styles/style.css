@@ -9,6 +9,11 @@ body {
   padding-top: 70px;
 }
 
+/* line 10, sass/partials/_layout.scss */
+img {
+  max-width: 100%;
+}
+
 /*
  * Bootstrap v3.0.0
  *
