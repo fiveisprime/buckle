@@ -25,7 +25,7 @@ module.exports = function(app) {
       }
       if (!user) return res.render('error', { error: 'User not found.' });
 
-      res.render('user/profile', { user: user });
+      res.render('user/profile', { profile: user });
     });
   });
 
