@@ -42,7 +42,22 @@ module.exports = function(app) {
     users.create(req.body, function(err, user) {
       if (err) {
         console.error(err);
-        return res.render('error', { error: err.message });
+        delete req.body.password;
+
+        var errors = [];
+        if (err.errors) {
+          var keys = Object.keys(err.errors);
+          for (var i = 0; i < keys.length; i++) {
+            errors.push(err.errors[keys[i]]);
+          }
+        } else {
+          errors.push(err.message);
+        }
+
+        return res.render('user/register', {
+          errors: errors
+        , data: req.body
+        });
       }
 
       req.session.user = user;
@@ -58,7 +73,10 @@ module.exports = function(app) {
     users.authenticate(req.body.id, req.body.password, function(err, user) {
       if (err) {
         console.error(err);
-        return res.render('error', { error: 'Unable to authenticate.' });
+        return res.render('user/login', {
+          error: err.message
+        , id: req.body.id
+        });
       }
 
       req.session.user = user;

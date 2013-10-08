@@ -1,7 +1,10 @@
 <div ng-controller="registerController" class="form-wrap">
   <div class="row">
     <div class="offset-by-six">
-      <form role="form" name="registerForm" novalidate action="/login" method="post" accept-charset="utf-8">
+      {{#each errors}}
+        <p>{{this}}</p>
+      {{/each}}
+      <form role="form" name="registerForm" novalidate action="/register" method="post" accept-charset="utf-8">
         <input type="text" class="form-control" name="username" placeholder="Username" ng-model="username" required autofocus>
         <input type="text" class="form-control" name="first" ng-model="first" placeholder="First Name" required>
         <input type="text" class="form-control" name="last" ng-model="last" placeholder="Last Name" required>
@@ -20,4 +23,7 @@
   <hr>
 </div>
 
+<script>
+  var reqData = {{{json data}}};
+</script>
 <script src="/js/pages/register.js"></script>

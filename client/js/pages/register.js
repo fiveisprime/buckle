@@ -2,10 +2,10 @@
 
 function registerController($scope) {
 
-  $scope.id = '';
-  $scope.first = '';
-  $scope.last = '';
-  $scope.email = '';
+  $scope.username = reqData.username || '';
+  $scope.first = reqData.first || '';
+  $scope.last = reqData.last || '';
+  $scope.email = reqData.email || '';
   $scope.password = '';
 
 }

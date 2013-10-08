@@ -40,7 +40,7 @@ User.prototype.authenticate = function(id, password, fn) {
       if (res) {
         fn(null, sanitize(user));
       } else {
-        fn(new Error('Invalid user credentials.'), null);
+        fn(new Error('Incorrect password.'), null);
       }
     });
   });

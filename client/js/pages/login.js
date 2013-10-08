@@ -2,7 +2,7 @@
 
 function loginController($scope) {
 
-  $scope.id = '';
+  $scope.id = id || '';
   $scope.password = '';
 
 }

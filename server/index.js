@@ -33,6 +33,11 @@ app.configure('development', function() {
 });
 
 hbs.registerPartials(path.resolve(__dirname, '../views/partials'));
+hbs.registerHelper('json', function(context) {
+  console.log(context);
+  if (!context) return JSON.stringify({});
+  return JSON.stringify(context);
+});
 
 //
 // Bootstrap modules.

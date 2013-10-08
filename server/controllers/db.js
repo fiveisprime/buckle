@@ -22,8 +22,8 @@ db = mongoose.connection;
 db.on('error', console.error);
 db.once('open', function initializeMongoose() {
   userSchema = new Schema({
-    username: { type: String, required: true, index: true }
-  , email: { type: String, required: true, index: true }
+    username: { type: String, required: true, unique: true, index: true }
+  , email: { type: String, required: true, unique: true, index: true }
   , password: { type: String, required: true }
   , first: String
   , last: String
@@ -73,8 +73,22 @@ exports.flatten = function(docs) {
 // Create a new user from the specified user data.
 //
 exports.createUser = function(data, fn) {
-  var user = new User(data);
-  user.save(fn);
+  User.find({ username: data.username }, function(err, docs) {
+    if (err) return fn(err, null);
+    if (docs && docs.length > 0) {
+      return fn(new Error('Username is already is use.'), null);
+    } else {
+      User.find({ email: data.email }, function(err, docs) {
+        if (err) return fn(err, null);
+        if (docs && docs.length > 0) {
+          return fn(new Error('Email address is already in use.'), null);
+        } else {
+          var user = new User(data);
+          user.save(fn);
+        }
+      });
+    }
+  });
 };
 
 //
