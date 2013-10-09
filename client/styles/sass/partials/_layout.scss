@@ -59,6 +59,10 @@ nav[role=navigation] {
   }
 }
 
+.centered {
+  text-align: center;
+}
+
 [disabled] {
   cursor: not-allowed;
 }
@@ -93,7 +97,6 @@ input.ng-invalid {
 .error {
   margin: 40px auto;
   height: 300px;
-  text-align: center;
 }
 
 // #Media Queries
