@@ -1094,31 +1094,38 @@ input.ng-invalid {
   margin-top: 50px;
 }
 
+/* line 93, sass/partials/_layout.scss */
+.error {
+  margin: 40px auto;
+  height: 300px;
+  text-align: center;
+}
+
 /* Smaller than standard 960 (devices and browsers) */
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 /* All Mobile Sizes (devices and browser) */
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
-  /* line 110, sass/partials/_layout.scss */
+  /* line 116, sass/partials/_layout.scss */
   .hero {
     height: 300px;
   }
 
-  /* line 114, sass/partials/_layout.scss */
+  /* line 120, sass/partials/_layout.scss */
   nav[role=navigation] {
     padding: 10px 0 20px 20px;
   }
-  /* line 116, sass/partials/_layout.scss */
+  /* line 122, sass/partials/_layout.scss */
   nav[role=navigation] ul {
     margin: 0 10px 0 30px;
     text-align: center;
   }
-  /* line 119, sass/partials/_layout.scss */
+  /* line 125, sass/partials/_layout.scss */
   nav[role=navigation] ul li {
     margin: 5px;
   }
-  /* line 123, sass/partials/_layout.scss */
+  /* line 129, sass/partials/_layout.scss */
   nav[role=navigation] .brand {
     margin-top: 10px;
   }
