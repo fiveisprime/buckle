@@ -1,31 +1,45 @@
+/*
+ * Lattice V0.0
+ * Copyright 2013, Dave Gamache, Matt Hernandez
+ * Free to use under the MIT license.
+ */
+
 // #Body Variables
 // ==================================================
-$bodyFontFamily: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$bodyFontFamily: 'Open Sans', sans-serif;
 $bodyFontSize: 14px;
 $bodyFontWeight: 21px;
+$bodyLineHeight: 21px;
 
 $bodyBackground: #FFF;
 $bodyColor: #444;
-
-// #Color Variables
-// ==================================================
-
-$primary: #e96633;
 
 // #Menu Variables
 // ==================================================
 $menuBackground: #2F2F2F;
 $menuColor: #D0D0D0;
 
+// #Color Variables
+// ==================================================
+
+$primary: #e96633;
+
 // #Link Variables
 // ==================================================
 $linkColor: #333;
 $linkHoverColor: #000;
 
+// #Button Variables
+// ==================================================
+$btnPrimary: #FDFDFD;
+$btnPrimaryBackground: #F38711;
+
+$btnDark: #FFF;
+$btnDarkBackground: #444;
+
 // #Header Variables
 // ==================================================
-//$headerFontFamily: "Georgia", "Times New Roman", serif;
-$headerFontFamily: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headerFontFamily: 'Open Sans', sans-serif;
 $headerFontWeight: normal;
 $headerColor: #181818;
 

@@ -1,10 +1,7 @@
 /*
- * Skeleton V1.2
- * Copyright 2011, Dave Gamache
- * www.getskeleton.com
+ * Lattice V0.0
+ * Copyright 2013, Dave Gamache, Matt Hernandez
  * Free to use under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 6/20/2012
  */
 
 // Table of Content
@@ -60,6 +57,8 @@ table {
   border-spacing: 0;
 }
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 // #Basic Styles
 // ==================================================
 body {
@@ -67,8 +66,8 @@ body {
   font-family: $bodyFontFamily;
   font-size: $bodyFontSize;
   font-weight: $bodyFontWeight;
+  line-height: $bodyLineHeight;
   color: $bodyColor;
-    -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -140,43 +139,56 @@ img.scale-with-grid {
 // #Buttons
 // ==================================================
 
-.button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  @include background-image(linear-gradient(#eee, rgba(255,255,255,.2), rgba(0,0,0,.2)));
-  border: 1px solid #aaa;
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  @include border-radius(3px, 3px);
-  color: #444;
+@mixin btn {
+  border: none;
   display: inline-block;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bold;
   text-decoration: none;
-  text-shadow: 0 1px rgba(255, 255, 255, .75);
   cursor: pointer;
   margin-bottom: 20px;
   line-height: normal;
   padding: 8px 10px;
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  &:hover {
-    color: #222;
-    @include background-image(linear-gradient(#ddd, rgba(255,255,255,.3), rgba(0,0,0,.3)));
-    border: 1px solid #888;
-    border-top: 1px solid #aaa;
-    border-left: 1px solid #aaa;
-  }
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
   &:active {
-    border: 1px solid #666;
-    @include background-image(linear-gradient(#ccc, rgba(255,255,255,.35), rgba(0,0,0,.4)));
+    outline: none;
+  }
+  &:focus {
+    outline: none;
   }
   &.full-width {
     width: 100%;
     padding-left: 0 !important;
     padding-right: 0 !important;
     text-align: center;
+  }
+}
+
+.btn {
+  @include btn();
+  background-color: $btnPrimaryBackground !important;
+  color: $btnPrimary !important;
+  &:hover {
+    background-color: darken($btnPrimaryBackground, 5%) !important;
+  }
+  &:active {
+    background-color: darken($btnPrimaryBackground, 10%) !important;
+    color: darken($btnPrimary, 5%) !important;
+  }
+}
+
+.btn-dark {
+  @include btn();
+  background-color: $btnDarkBackground !important;
+  color: $btnDark !important;
+  &:hover {
+    background-color: darken($btnDarkBackground, 5%) !important;
+  }
+  &:active {
+    background-color: darken($btnDarkBackground, 10%) !important;
+    color: darken($btnDark, 5%) !important;
   }
 }
 
@@ -204,15 +216,21 @@ select {
   border: 1px solid #ccc;
   padding: 6px 4px;
   outline: none;
-  @include border-radius();
-  font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #777;
+  font: 13px "Open Sans", sans-serif;
+  color: #505050;
   margin: 0;
   width: 210px;
   max-width: 100%;
   display: block;
   margin-bottom: 20px;
-  background: #fff;
+  background-color: #fff;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+   -webkit-appearance: none;
+   -webkit-border-radius: 0;
 }
 select {
   padding: 0;

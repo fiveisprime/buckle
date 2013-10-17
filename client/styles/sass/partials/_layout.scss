@@ -1,10 +1,7 @@
 /*
- * Skeleton V1.2
- * Copyright 2011, Dave Gamache
- * www.getskeleton.com
+ * Lattice V0.0
+ * Copyright 2013, Dave Gamache, Matt Hernandez
  * Free to use under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 6/20/2012
  */
 
 // Table of Content
@@ -32,7 +29,7 @@ nav[role=navigation] {
   ul {
     position: absolute;
     display: inline-block;
-    margin: 10px;
+    margin: 2px 5px;
     list-style: none;
     li {
       display: inline-block;
@@ -71,6 +68,10 @@ input.ng-invalid {
   background-color: rgba(255, 209, 208, 0.3);
 }
 
+.error-message {
+  color: #680001;
+}
+
 // #Page Styles
 // ==================================================
 
@@ -84,9 +85,6 @@ input.ng-invalid {
   h1, h2 {
     font-family: $bodyFontFamily;
     color: #E5E6D6;
-  }
-  a {
-    background-color: #E5E6D6;
   }
 }
 
@@ -143,13 +141,13 @@ input.ng-invalid {
 //  copy your FontName into code below and remove
 //  comment brackets
 
-/*  @font-face {
-      font-family: 'FontName';
-      src: url('../fonts/FontName.eot');
-      src: url('../fonts/FontName.eot?iefix') format('eot'),
-           url('../fonts/FontName.woff') format('woff'),
-           url('../fonts/FontName.ttf') format('truetype'),
-           url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
-      font-weight: normal;
-      font-style: normal; }
-*/
+//@font-face {
+//  font-family: 'FontName';
+//  src: font-url('FontName.eot');
+//  src: font-url('FontName.eot?iefix') format('eot'),
+//       font-url('FontName.woff') format('woff'),
+//       font-url('FontName.ttf') format('truetype'),
+//       font-url('FontName.svg#webfontZam02nTh') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//}
