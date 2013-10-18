@@ -1,16 +1,14 @@
 <div ng-controller="registerController" class="form-wrap">
   <div class="row">
     <div class="offset-by-six">
-      {{#each errors}}
-        <p>{{this}}</p>
-      {{/each}}
-      <form role="form" name="registerForm" novalidate action="/register" method="post" accept-charset="utf-8">
-        <input type="text" class="form-control" name="username" placeholder="Username" ng-model="username" required autofocus>
-        <input type="text" class="form-control" name="first" ng-model="first" placeholder="First Name" required>
-        <input type="text" class="form-control" name="last" ng-model="last" placeholder="Last Name" required>
-        <input type="email" class="form-control" name="email" ng-model="email" placeholder="Email Address" required>
-        <input type="password" class="form-control" name="password" ng-model="password" placeholder="Password" required>
-        <button type="submit" class="btn-dark" ng-disabled="registerForm.$invalid" class="btn">Sign Up</button>
+      <form role="form" name="register" novalidate action="/register" method="post" accept-charset="utf-8">
+        <div class="error-message">{{errors}}</div>
+        <input type="text" class="form-control" name="username" placeholder="Username" autofocus>
+        <input type="email" class="form-control" name="email" placeholder="Email Address">
+        <input type="password" class="form-control" name="password" placeholder="Password">
+        <input type="text" class="form-control" name="first" placeholder="First Name">
+        <input type="text" class="form-control" name="last" placeholder="Last Name">
+        <button type="submit" class="btn-dark">Sign Up</button>
       </form>
     </div>
     <div class="offset-by-six">

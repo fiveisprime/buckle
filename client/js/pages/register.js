@@ -1,11 +1,13 @@
-/* jshint undef: false, unused: false */
+/* jshint unused: false */
 
-function registerController($scope) {
+var Buckle = Buckle || {};
 
-  $scope.username = reqData.username || '';
-  $scope.first = reqData.first || '';
-  $scope.last = reqData.last || '';
-  $scope.email = reqData.email || '';
-  $scope.password = '';
+!function(Buckle) {
 
-}
+  'use strict';
+
+  var registerView = new Buckle.Views.Register({
+    el: 'form[name=register]'
+  });
+
+}(Buckle);

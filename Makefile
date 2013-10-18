@@ -1,8 +1,9 @@
 SRC = server/index.js server/controllers/*.js server/routes/*.js \
-	client/js/pages/*.js client/js/application/application.js
+	client/js/pages/*.js client/js/application/**/*.js
 
-CLIENT = client/js/vendor/jquery.js client/js/vendor/bootstrap.js \
-	client/js/vendor/angular.js client/js/application/application.js
+CLIENT = client/js/vendor/underscore.js client/js/vendor/jquery.js \
+	client/js/vendor/backbone.js client/js/application/application.js \
+	client/js/application/views/*.js
 
 CLIENTOUT = client/js/app.js
 CLIENTMIN = client/js/app.min.js

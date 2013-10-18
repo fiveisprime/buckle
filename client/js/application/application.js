@@ -1,3 +1,3 @@
-/* jshint undef: false, unused: false */
-
-angular.module('app', []);
+var Buckle = {};
+Buckle.Views = {};
+Buckle.Models = {};
