@@ -4459,7 +4459,10 @@ var Buckle = Buckle || {}
       this.$el.html(this.template(this.model.toJSON()));
     }
   , update: function() {
-      // TODO: Update the model from the inputs...
+      this.model.set('first', this.$('[name=first]').val());
+      this.model.set('last', this.$('[name=last]').val());
+      this.model.set('email', this.$('[name=email]').val());
+
       this.model.save(null, {
         success: _.bind(this.success, this)
       , error: _.bind(this.error, this)
