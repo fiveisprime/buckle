@@ -88,4 +88,11 @@ module.exports = function(app) {
     req.session.user = null;
     res.redirect('/');
   });
+
+  //
+  // Routes.
+  // ===============
+  //
+
+  require('./api')(app, controllers);
 };

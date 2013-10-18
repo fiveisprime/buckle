@@ -2,14 +2,21 @@
 
 <script type="text/x-underscore-template" id="dashboard-template">
   <div class="sixteen columns">
-    <div class="row">
-
-    <div class="four columns alpha">
-      <h3><%= first %> <%= last %></h3>
+    <div class="one-third column alpha">
+      <h3><%= first %> <%= last %> (<%= username %>)</h3>
       <img src="<%= image %>" alt="<%= username %>" title="<%= username %>">
       <p><small>Change your profile image at <a href="http://gravatar.com">gravatar.com</a>.</small></p>
     </div>
+    <div class="one-third column omega">
+      <h3>Edit Your Info</h3>
+      <label for="first">First Name</label>
+      <input name="first" type="text" value="<%= first %>">
+      <label for="last">Last Name</label>
+      <input name="last" type="text" value="<%= last %>">
+      <label for="email">Email Address</label>
+      <input name="email" type="text" value="<%= email %>">
 
+      <input type="submit" name="update" value="Update" class="btn">
     </div>
   </div>
 </script>

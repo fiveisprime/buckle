@@ -110,14 +110,5 @@ exports.getUsers = function(fn) {
 // Update the specified user object.
 //
 exports.updateUser = function(data, fn) {
-  User.findOne({ username: data.username }, function(err, user) {
-    if (err) return fn(err, null);
-    var keys = Object.keys(user), i = 0;
-
-    for (; i < keys.length; i++) {
-      user[keys[i]] = data[keys[i]] || user[keys[i]];
-    }
-
-    user.save(fn);
-  });
+  User.update({ username: data.username }, data, fn);
 };
