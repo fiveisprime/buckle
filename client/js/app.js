@@ -12662,7 +12662,7 @@ var Buckle = Buckle || {}
   });
 
 }(Buckle, Backbone, _);
-var Buckle = Buckle || {}
+var Buckle   = Buckle || {}
   , Backbone = Backbone || {};
 
 !function(Buckle, Backbone) {
@@ -12696,7 +12696,7 @@ var Buckle = Buckle || {}
   });
 
 }(Buckle, Backbone);
-var Buckle = Buckle || {}
+var Buckle   = Buckle || {}
   , Backbone = Backbone || {};
 
 !function(Buckle, Backbone) {
@@ -12736,6 +12736,21 @@ var Buckle = Buckle || {}
       }
 
       this.$err.empty();
+    }
+  });
+
+}(Buckle, Backbone);
+var Buckle   = Buckle || {}
+  , Backbone = Backbone || {};
+
+!function(Buckle, Backbone) {
+
+  'use strict';
+
+  Buckle.Models.User = Backbone.Model.extend({
+    defaults: {
+      first: ''
+    , last: ''
     }
   });
 

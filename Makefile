@@ -3,7 +3,7 @@ SRC = server/index.js server/controllers/*.js server/routes/*.js \
 
 CLIENT = client/js/vendor/underscore.js client/js/vendor/jquery.js \
 	client/js/vendor/backbone.js client/js/application/application.js \
-	client/js/application/views/*.js
+	client/js/application/models/*.js client/js/application/views/*.js
 
 CLIENTOUT = client/js/app.js
 CLIENTMIN = client/js/app.min.js
