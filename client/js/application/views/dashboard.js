@@ -7,9 +7,15 @@ var Buckle = Buckle || {}
   'use strict';
 
   Buckle.Views.Dashboard = Backbone.View.extend({
-    events: {}
+    events: {
+      'click .update': 'update'
+    }
   , initialize: function() {
-      this.template = _.template(this.$('#dashboard-template'));
+      this.template = _.template($('#dashboard-template').html());
+      this.render();
+    }
+  , render: function() {
+      this.$el.html(this.template(this.model.toJSON()));
     }
   });
 

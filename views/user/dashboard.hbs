@@ -1,13 +1,21 @@
-<div class="container dashboard">
+<div class="container dashboard"></div>
+
+<script type="text/x-underscore-template" id="dashboard-template">
   <div class="sixteen columns">
     <div class="row">
 
     <div class="four columns alpha">
-      <h3>{{user.first}} {{user.last}}</h3>
-      <img src="{{user.image}}" alt="{{user.username}}" title="{{user.username}}">
+      <h3><%= first %> <%= last %></h3>
+      <img src="<%= image %>" alt="<%= username %>" title="<%= username %>">
       <p><small>Change your profile image at <a href="http://gravatar.com">gravatar.com</a>.</small></p>
     </div>
 
     </div>
   </div>
-</div>
+</script>
+
+<script>
+  var user = {{{json user}}};
+</script>
+
+<script src="/js/pages/dashboard.js"></script>

@@ -1,7 +1,7 @@
 SRC = server/index.js server/controllers/*.js server/routes/*.js \
 	client/js/pages/*.js client/js/application/**/*.js
 
-CLIENT = client/js/vendor/underscore.js client/js/vendor/jquery.js \
+CLIENT = client/js/vendor/underscore.js client/js/vendor/zepto.js \
 	client/js/vendor/backbone.js client/js/application/application.js \
 	client/js/application/models/*.js client/js/application/views/*.js
 
