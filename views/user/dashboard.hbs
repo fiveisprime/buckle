@@ -25,7 +25,9 @@
 </script>
 
 <script>
-  var user = {{{json user}}};
+  var Buckle = Buckle || {};
+  Buckle.data = Buckle.data || {};
+  Buckle.data.user = JSON.parse('{{{json user}}}');
 </script>
 
 <script src="/js/pages/dashboard.js"></script>

@@ -9,7 +9,7 @@ var Buckle = Buckle || {}
 
   var dashboardView = new Buckle.Views.Dashboard({
     el: '.dashboard'
-  , model: new Buckle.Models.User(user)
+  , model: new Buckle.Models.User(Buckle.data.user)
   });
 
 }(Buckle, user);
