@@ -1,7 +1,4 @@
-/* jshint unused: false */
-
-var Buckle = Buckle || {}
-  , user   = user || {};
+/* jshint unused: false, undef: false */
 
 !function(Buckle, user) {
 

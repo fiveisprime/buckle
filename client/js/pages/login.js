@@ -1,4 +1,4 @@
-/* jshint unused: false */
+/* jshint unused: false, undef: false */
 
 var Buckle = Buckle || {};
 

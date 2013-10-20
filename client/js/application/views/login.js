@@ -1,5 +1,4 @@
-var Buckle   = Buckle || {}
-  , Backbone = Backbone || {};
+/* jshint undef: false */
 
 !function(Buckle, Backbone) {
 

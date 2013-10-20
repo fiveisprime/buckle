@@ -4423,8 +4423,9 @@ window.Zepto = Zepto
 var Buckle = {};
 Buckle.Views = {};
 Buckle.Models = {};
-var Buckle   = Buckle || {}
-  , Backbone = Backbone || {};
+
+Buckle.data = {};
+/* jshint undef: false */
 
 !function(Buckle, Backbone) {
 
@@ -4438,9 +4439,7 @@ var Buckle   = Buckle || {}
   });
 
 }(Buckle, Backbone);
-var Buckle = Buckle || {}
-  , Backbone = Backbone || {}
-  , _ = _ || {};
+/* jshint undef: false */
 
 !function(Buckle, Backbone, _) {
 
@@ -4479,8 +4478,7 @@ var Buckle = Buckle || {}
   });
 
 }(Buckle, Backbone, _);
-var Buckle   = Buckle || {}
-  , Backbone = Backbone || {};
+/* jshint undef: false */
 
 !function(Buckle, Backbone) {
 
@@ -4513,8 +4511,7 @@ var Buckle   = Buckle || {}
   });
 
 }(Buckle, Backbone);
-var Buckle   = Buckle || {}
-  , Backbone = Backbone || {};
+/* jshint undef: false */
 
 !function(Buckle, Backbone) {
 
