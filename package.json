@@ -24,7 +24,7 @@
     "bcrypt": "~0.7.7",
     "express-trace": "0.0.3",
     "gravatar": "~1.0.6",
-    "phalanx": "0.0.1"
+    "phalanx": "0.0.2"
   },
   "devDependencies": {
     "jshint": "~2.1.8",
