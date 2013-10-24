@@ -9,4 +9,4 @@
   , model: new Buckle.Models.User(Buckle.data.user)
   });
 
-}(Buckle, user);
+}(Buckle, Buckle.data.user);

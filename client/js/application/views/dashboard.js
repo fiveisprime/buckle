@@ -30,9 +30,19 @@
     }
   , success: function() {
       this.render();
+      this.$el.find('.edit-message')
+        .empty()
+        .text('Saved!')
+        .show()
+        .fadeOut(2000);
     }
-  , error: function(err) {
-      console.log(err);
+  , error: function() {
+      console.log(arguments);
+      this.$el.find('.edit-message')
+        .empty()
+        .text('Failed to save..')
+        .show()
+        .fadeOut(2000);
     }
   });
 

@@ -1151,31 +1151,37 @@ input.ng-invalid {
   height: 300px;
 }
 
+/* line 100, sass/partials/_layout.scss */
+.edit-message {
+  display: inline;
+  margin-left: 15px;
+}
+
 /* Smaller than standard 960 (devices and browsers) */
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 /* All Mobile Sizes (devices and browser) */
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
-  /* line 117, sass/partials/_layout.scss */
+  /* line 122, sass/partials/_layout.scss */
   .hero {
     height: 300px;
   }
 
-  /* line 121, sass/partials/_layout.scss */
+  /* line 126, sass/partials/_layout.scss */
   nav[role=navigation] {
     padding: 10px 0 20px 20px;
   }
-  /* line 123, sass/partials/_layout.scss */
+  /* line 128, sass/partials/_layout.scss */
   nav[role=navigation] ul {
     margin: 0 10px 0 30px;
     text-align: center;
   }
-  /* line 126, sass/partials/_layout.scss */
+  /* line 131, sass/partials/_layout.scss */
   nav[role=navigation] ul li {
     margin: 5px;
   }
-  /* line 130, sass/partials/_layout.scss */
+  /* line 135, sass/partials/_layout.scss */
   nav[role=navigation] .brand {
     margin-top: 10px;
   }
