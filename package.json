@@ -8,7 +8,7 @@
     "node": "0.10.x"
   },
   "scripts": {
-    "test": "grunt --verbose",
+    "test": "grunt test --verbose",
     "start": "node server/index"
   },
   "repository": {

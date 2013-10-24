@@ -78,5 +78,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'compass']);
+  grunt.registerTask('test', ['jshint']);
 
 };
