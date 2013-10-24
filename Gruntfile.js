@@ -26,10 +26,10 @@ module.exports = function(grunt) {
   , concat: {
       dist: {
         src: [
-          'client/js/lib/underscore.js'
-        , 'client/js/lib/jquery.js'
-        , 'client/js/lib/backbone.js'
-        , 'client/js/application/modulus.js'
+          'client/js/vendor/underscore.js'
+        , 'client/js/vendor/jquery.js'
+        , 'client/js/vendor/backbone.js'
+        , 'client/js/application/application.js'
         , 'client/js/application/views/*.js'
         , 'client/js/application/models/*.js'
         ]
