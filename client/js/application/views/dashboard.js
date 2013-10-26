@@ -22,27 +22,26 @@
       this.model.set('email', this.$('[name=email]').val());
 
       this.model.save(null, {
-        success: _.bind(this.success, this)
-      , error: _.bind(this.error, this)
+        complete: _.bind(this.complete, this)
       });
 
       return false;
     }
-  , success: function() {
-      this.render();
-      this.$el.find('.edit-message')
-        .empty()
-        .text('Saved!')
-        .show()
-        .fadeOut(2000);
-    }
-  , error: function() {
-      console.log(arguments);
-      this.$el.find('.edit-message')
-        .empty()
-        .text('Failed to save..')
-        .show()
-        .fadeOut(2000);
+  , complete: function(res, message) {
+      if (message === 'success') {
+        this.render();
+        this.$el.find('.edit-message')
+          .empty()
+          .text('Saved!')
+          .show()
+          .fadeOut(2000);
+      } else {
+        this.$el.find('.edit-message')
+          .empty()
+          .text('Failed to save..')
+          .show()
+          .fadeOut(2000);
+      }
     }
   });
 

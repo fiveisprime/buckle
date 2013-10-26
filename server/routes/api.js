@@ -7,7 +7,7 @@ module.exports = function(app, controllers) {
       if (err) return phalanx.internalServerError(err).json(res);
       if (result.err) return phalanx.badRequest('Failed to save user.').json(res);
 
-      res.send();
+      res.json({ result: true });
     });
   });
 
